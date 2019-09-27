@@ -1,0 +1,3 @@
+My new file
+Second line
+Input in working copy
