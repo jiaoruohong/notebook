@@ -1,0 +1,5 @@
+# Unit 8 - Translation I
+
+## I. Put the following text into Chinese.
+
+The world “science” seems to contain some magic power; if put forward, it should bring about immediate consent, with no possible discussion. This situation is exploited for advertisement, but it is basically unsound. Science is not a creed. It was not revealed to man by some superior deity. Science is a product of the human brain, and as such, it is always open to discussion and possible revision. There is no absolute truth in it: rather relativity is its rule. It represents a logical summary of human knowledge, based on human observation and experience, both of which are always of limited range and finite accuracy. As for the logic introduced into the classification of empirical facts, it is typically a product of our brain. We select experimental results that appear to us as logically connect together, and we ignore many facts that do not fit into our “logic”. This rather artificial procedure is our own invention and we are so proud of it that we insist its results should be considered as “laws of nature”.

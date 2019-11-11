@@ -1,0 +1,5 @@
+# Unit 3 - Translation I
+
+## I. Put the following text into Chinese.
+
+The plane arcs softly into its final descent at Hong Kong International Airport. Below are Victoria Harbor and the silent rhythms of countless ships. Beyond, sloping mountains fence in a breathtaking city view that seems to stretch forever. This is no ordinary airport. This is no ordinary city. An elderly man passes by wearing pajamas, bearing a brightly feathered bird singing merrily in its cage. Professionals gather at a roadside kitchen for noodles, congee and shrimp. Incense from a tiny Taoist temple drifts into the pounding beat of rock music pouring out of a discotheque. A ferry travels on the nearby water regularly, taking passengers to an isolated island 40 minutes away, where Buddhist temples and tiny fishing villages dot the landscape. Hong Kong, 161 km south of the Tropic of Cancer, beats the pulse of Southeast Asia’s heart, where East greets West, and past colors present themselves.
