@@ -16,8 +16,8 @@
 
 - [x] **IoTFuzzer: Discovering Memory Corruptions in IoT Through App-based Fuzzing.**
 - [x] **Fear and Logging in the Internet of Things.**
-- [ ] **Decentralized Action Integrity for Trigger-Action IoT Platforms.**
-- [ ] **What You Corrupt Is Not What You Crash: Challenges in Fuzzing Embedded Devices.**
+- [x] **Decentralized Action Integrity for Trigger-Action IoT Platforms.**
+- [x] **What You Corrupt Is Not What You Crash: Challenges in Fuzzing Embedded Devices.**
 
 ## Conference on Computer and Communications Security (CCS)
 
