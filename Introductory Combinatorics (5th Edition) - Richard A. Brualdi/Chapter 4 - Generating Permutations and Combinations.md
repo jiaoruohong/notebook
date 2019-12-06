@@ -2,30 +2,34 @@
 
 ## 4.1 生成排列
 
-**生成 $$ 的排列的算法**  
-从 $$ 开始。  
+**生成 $\{1,2, \cdots, n\}$ 的排列的算法**  
+从 $[\overleftarrow{1},\overleftarrow{2},\cdots,\overleftarrow{n}]$ 开始。  
 当存在一个可移动整数时，完成下面事情：  
-1. 求出最大的可移动整数 $$ 。  
-2. 交换 $$ 和它的箭头所指向的与它相邻的整数。  
-3. 交换所有满足 $$ 的整数 $$ 上的箭头的方向。
+1. 求出最大的可移动整数 $m$ 。  
+2. 交换 $m$ 和它的箭头所指向的与它相邻的整数。  
+3. 交换所有满足 $p>m$ 的整数 $p$ 上的箭头的方向。
+
+我们以 $n=4$ 为例给出算法的具体说明。结果用两列显示，第一列给出前12个排列。  
+$$\begin{array}{l}[\overleftarrow{1},\overleftarrow{2},\overleftarrow{3},\overleftarrow{4}]\quad[\overrightarrow{4},\overrightarrow{3},\overleftarrow{2},\overleftarrow{1}] \\ [\overleftarrow{1},\overleftarrow{2},\overleftarrow{4},\overleftarrow{3}]\quad[\overrightarrow{3},\overrightarrow{4},\overleftarrow{2},\overleftarrow{1}] \\ [\overleftarrow{1},\overleftarrow{4},\overleftarrow{2},\overleftarrow{3}]\quad[\overrightarrow{3},\overleftarrow{2},\overrightarrow{4},\overleftarrow{1}] \\ [\overleftarrow{4},\overleftarrow{1},\overleftarrow{2},\overleftarrow{3}]\quad[\overrightarrow{3},\overleftarrow{2},\overleftarrow{1},\overrightarrow{4}] \\ [\overrightarrow{4},\overleftarrow{1},\overleftarrow{3},\overleftarrow{2}]\quad[\overleftarrow{2},\overrightarrow{3},\overleftarrow{1},\overleftarrow{4}] \\ [\overleftarrow{1},\overrightarrow{4},\overleftarrow{3},\overleftarrow{2}]\quad[\overleftarrow{2},\overrightarrow{3},\overleftarrow{4},\overleftarrow{1}] \\ [\overleftarrow{1},\overleftarrow{3},\overrightarrow{4},\overleftarrow{2}]\quad[\overleftarrow{2},\overleftarrow{4},\overrightarrow{3},\overleftarrow{1}] \\ [\overleftarrow{1},\overleftarrow{3},\overleftarrow{2},\overrightarrow{4}]\quad[\overleftarrow{4},\overleftarrow{2},\overrightarrow{3},\overleftarrow{1}] \\ [\overleftarrow{3},\overleftarrow{1},\overleftarrow{2},\overleftarrow{4}]\quad[\overrightarrow{4},\overleftarrow{2},\overleftarrow{1},\overrightarrow{3}] \\ [\overleftarrow{3},\overleftarrow{1},\overleftarrow{4},\overleftarrow{2}]\quad[\overleftarrow{2},\overrightarrow{4},\overleftarrow{1},\overrightarrow{3}] \\ [\overleftarrow{3},\overleftarrow{4},\overleftarrow{1},\overleftarrow{2}]\quad[\overleftarrow{2},\overleftarrow{1},\overrightarrow{4},\overrightarrow{3}] \\ [\overleftarrow{4},\overleftarrow{3},\overleftarrow{1},\overleftarrow{2}]\quad[\overleftarrow{2},\overleftarrow{1},\overrightarrow{3},\overrightarrow{4}]\end{array}$$
+因为在 $[\overleftarrow{2},\overleftarrow{1},\overrightarrow{3},\overrightarrow{4}]$ 中没有可移动整数，所以算法终止。
 
 ## 4.2 排列中的逆序
 
-设 $$ 是集合 $$ 的一个排列。如果 $$ 且 $$ ，则称数对 $$ 为一个**逆序（inversion）**。
+设 $i_{1} i_{2} \cdots i_{n}$ 是集合 $\{1,2, \cdots, n\}$ 的一个排列。如果 $k<l$ 且 $i_{k}>i_{l}$ ，则称数对 $\left(i_{k}, i_{l}\right)$ 为一个**逆序（inversion）**。
 
-对于一个排列 $$ ，我们令 $$ 表示第二个成分是 $$ 的逆序的数量。换句话说： $$ 等于在排列中在 $$ 的前面但又大于 $$ 的整数的个数，它度量 $$ 的无序程度。
+对于一个排列 $i_{1} i_{2} \cdots i_{n}$ ，我们令 $a_{j}$ 表示第二个成分是 $j$ 的逆序的数量。换句话说： $a_{j}$ 等于在排列中在 $j$ 的前面但又大于 $j$ 的整数的个数，它度量 $j$ 的无序程度。
 
 数值序列
-$$$$
-叫做排列 $$ 的逆序列。 $$ 度量一个排列的**无序程度**。
+$$a_{1}, a_{2}, \cdots, a_{n}$$
+叫做排列 $i_{1} i_{2} \cdots i_{n}$ 的逆序列。 $a_{1}+a_{2}+\dots+a_{n}$ 度量一个排列的**无序程度**。
 
-**定理4.2.1** 设 $$ 是满足下面条件的整数序列：
-$$$$
-那么，一定存在唯一一个 $$ 的排列，它的逆序列是 $$ 。
+**定理4.2.1** 设 $b_{1}, b_{2}, \cdots, b_{n}$ 是满足下面条件的整数序列：
+$$i0 \leqslant b_{1} \leqslant n-1,0 \leqslant b_{2} \leqslant n-2, \cdots, 0 \leqslant b_{m 1} \leqslant 1, b_{n}=0$$
+那么，一定存在唯一一个 $i\{1,2, \cdots, n\}$ 的排列，它的逆序列是 $b_{1}, b_{2}, \cdots, b_{n}$ 。
 
 **算法I：从逆序列构建一个排列**
- $$ ：写出 $$ 。  
- $$ ：考虑 $$ 。我们知道 $$ 。如果 $$ ，那么 $$ 必须放在 $$ 的前面。如果 $$ ，那么 $$ 必须放在 $$ 的后面。  
+ $n$ ：写出 $n$ 。  
+ $n-1$ ：考虑 $b_{n-1}$ 。我们知道 $0 \leqslant b_{n}, \leqslant 1$ 。如果 $b_{n-1}=0$ ，那么 $n-1$ 必须放在 $n$ 的前面。如果 $b_{n-1}=1$ ，那么 $n-1$ 必须放在 $n$ 的后面。  
 ...
  $$ ：（一般步骤）考虑 $$ 。我们知道 $$ 。在从步骤 $$ 直到步骤 $$ 中， $$ 个数 $$ 都已经按所要求的顺序放好。如果 $$ ，那么 $$ 必须放在由步骤 $$ 得到的所有数的前面。如果 $$ ，那么 $$ 必须放在前两个数之间 $$ 如果 $$ ，那么 $$ 必须放在所有数的后面。  
 ...
