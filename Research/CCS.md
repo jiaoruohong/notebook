@@ -39,7 +39,7 @@
     **Where the Wild Warnings Are: Root Causes of Chrome HTTPS Certificate Errors.**
 
 - [ ] **Kurt Thomas**, Frank Li, Ali Zand, Jacob Barrett, Juri Ranieri, Luca Invernizzi, Yarik Markov, Oxana Comanescu, Vijay Eranti, Angelika Moscicki, Daniel Margolis, Vern Paxson, Elie Bursztein: </br>
-    **Data Breaches, Phishing, or Malware?: Understanding the Risks of Stolen Credentials.**
+    **Data Breaches, Phishing, or Malware? Understanding the Risks of Stolen Credentials.**
 
 ### ***Session H3: Web Security***
 
