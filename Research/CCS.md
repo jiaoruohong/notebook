@@ -108,7 +108,7 @@
     **Pinto: Enabling Video Privacy for Commodity IoT Cameras.**
 
 - [ ] **Iulia Bastys**, Musard Balliu, Andrei Sabelfeld: </br>
-    **If This Then What?: Controlling Flows in IoT Apps.**
+    **If This Then What? Controlling Flows in IoT Apps.**
 
 ### ***Session 7B: Formal Methods and Language Security***
 
@@ -135,42 +135,6 @@
 
 - [ ] **Xiaokui Shu**, Frederico Araujo, Douglas Lee Schales, Marc Ph. Stoecklin, Jiyong Jang, Heqing Huang, Josyula R. Rao: </br>
     **Threat Intelligence Computing.**
-
-### ***Poster Presentations***
-
-- [ ] **Said Al-Riyami**, Frans Coenen, Alexei Lisitsa: </br>
-    **A Re-evaluation of Intrusion Detection Accuracy: Alternative
-Evaluation Strategy.**
-
-- [ ] **Wooyoung Go**, Daewoo Lee: </br>
-    **Toward Trustworthy Deep Learning in Security.**
-
-- [ ] **Ryo Iijima**, Shota Minami, Yunao Zhou, Tatsuya Takehisa, Takeshi Takahashi, Yasuhiro Oikawa, Tatsuya Mori: </br>
-    **Audio Hotspot Attack: An Attack on Voice Assistance Systems Using Directional Sound Beams.**
-
-- [ ] **Mohsen Imani**, Mohammad Saidur Rahman, Matthew Wright: </br>
-    **Adversarial Traces for Website Fingerprinting Defense.**
-
-- [ ] **Yujie Ji**, Ting Wang: </br>
-    **Towards Understanding the Dynamics of Adversarial Attacks.**
-
-- [ ] **Yeeun Ku**, Leo Hyun Park, Sooyeon Shin, Taekyoung Kwon: </br>
-    **A Guided Approach to Behavioral Authentication.**
-
-- [ ] **Zachary Matthews**, Natalija Vlajic: </br>
-    **Can Browser Add-Ons Protect Your Children from Online Tracking?**
-
-- [ ] **Seung Ho Na**, Kwanwoo Kim, Seungwon Shin: </br>
-    **Knowledge Seeking on The Shadow Brokers.**
-
-- [ ] **Talha Ongun**, Alina Oprea, Cristina Nita-Rotaru, Mihai Christodorescu, Negin Salajegheh: </br>
-    **The House That Knows You: User Authentication Based on IoT Data.**
-
-- [ ] **Rachel Petrik**, Berat Arik, Jared M. Smith: </br>
-    **Towards Architecture and OS-Independent Malware Detection via Memory Forensics.**
-
-- [ ] **Michael Schliep**, Nicholas Hopper: </br>
-    **End-to-End Secure Mobile Group Messaging with Conversation Integrity and Minimal Metadata Leakage.**
 
 ## 26th CCS 2019: London, UK
 
@@ -252,7 +216,7 @@ Evaluation Strategy.**
 ### ***Session 4D: Formal Analysis II***
 
 - [ ] **Susan Hohenberger**, Satyanarayana Vusirikala: </br>
-    **Are These Pairing Elements Correct?: Automated Verification and Applications.**
+    **Are These Pairing Elements Correct? Automated Verification and Applications.**
 
 - [ ] **Sjouke Mauw**, Zach Smith, Jorge Toro-Pozo, Rolando Trujillo-Rasua: </br>
     **Post-Collusion Security and Distance Bounding.**
@@ -315,27 +279,4 @@ Evaluation Strategy.**
 
 - [ ] **Sazzadur Rahaman**, Ya Xiao, Sharmin Afrose, Fahad Shaon, Ke Tian, Miles Frantz, Murat Kantarcioglu, Danfeng (Daphne) Yao: </br>
     **CryptoGuard: High Precision Detection of Cryptographic Vulnerabilities in Massive-sized Java Projects.**
-
-### ***Posters***
-
-- [ ] **Bo Yu, Pengfei Wang**, Tai Yue, Yong Tang: </br>
-    **Poster: Fuzzing IoT Firmware via Multi-stage Message Generation.**
-
-- [ ] **John Mikulskis**, Johannes K. Becker, Stefan Gvozdenovic, David Starobinski: </br>
-    **Snout: An Extensible IoT Pen-Testing Tool.**
-
-- [ ] **Wladimir De la Cadena**, Asya Mitseva, Jan Pennekamp, Jens Hiller, Fabian Lanze, Thomas Engel, Klaus Wehrle, Andriy Panchenko: </br>
-    **POSTER: Traffic Splitting to Counter Website Fingerprinting.**
-
-- [ ] **Stephan Kleber**, Frank Kargl: </br>
-    **Poster: Network Message Field Type Recognition.**
-
-- [ ] **Saniat Javid Sohrawardi**, Akash Chintha, Bao Thai, Sovantharith Seng, Andrea Hickerson, Raymond Ptucha, Matthew Wright: </br>
-    **Poster: Towards Robust Open-World Detection of Deepfakes.**
-
-- [ ] **Sovantharith Seng**, Huzeyfe Kocabas, Mahdi Nasrullah Al-Ameen, Matthew Wright: </br>
-    **Poster: Understanding User's Decision to Interact with Potential Phishing Posts on Facebook using a Vignette Study.**
-
-- [ ] **Giuseppe Siracusano**, Martino Trevisan, Roberto Gonzalez, Roberto Bifulco: </br>
-    **Poster: On the Application of NLP to Discover Relationships between Malicious Network Entities.**
 
