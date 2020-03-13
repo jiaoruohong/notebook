@@ -62,7 +62,7 @@
 ### ***Session J3: Problematic Patches***
 
 - [ ] **Ruian Duan**, Ashish Bijlani, Meng Xu, Taesoo Kim, Wenke Lee: </br>
-    **Identifying Open-Source License Violation and 1-day Security Risk at Large Scale.**
+    **Checking Open-Source License Violation and 1-day Security Risk at Large Scale.**
 
 - [ ] **Erik Derr**, Sven Bugiel, Sascha Fahl, Yasemin Acar, Michael Backes: </br>
     **Keep me Updated: An Empirical Study of Third-Party Library Updatability on Android.**
