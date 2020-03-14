@@ -1,18 +1,18 @@
 # USENIX Reading List
 
-## 26th USENIX Security Symposium 2017: Vancouver, BC, Canada
+## [26th USENIX Security Symposium 2017: Vancouver, BC, Canada](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2017)
 
-### ***Side-Channel Countermeasures***
+### [***Side-Channel Countermeasures***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2017/Side-Channel%20Countermeasures)
 
 - [ ] **Shuai Wang**, Pei Wang, Xiao Liu, Danfeng Zhang, Dinghao Wu: </br>
     **CacheD: Identifying Cache-Based Timing Channels in Production Software.**
 
-### ***Malware and Binary Analysis***
+### [***Malware and Binary Analysis***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2017/Malware%20and%20Binary%20Analysis)
 
 - [ ] **Lei Xue**, Yajin Zhou, Ting Chen, Xiapu Luo, Guofei Gu: </br>
     **Malton: Towards On-Device Non-Invasive Mobile Malware Analysis for ART.**
 
-### ***Embedded Systems***
+### [***Embedded Systems***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2017/Embedded%20Systems)
 
 - [ ] **Yuan Tian**, Nan Zhang, Yue-Hsun Lin, XiaoFeng Wang, Blase Ur, Xianzheng Guo, Patrick Tague: </br>
     **SmartAuth: User-Centered Authorization for the Internet of Things.**
@@ -20,29 +20,29 @@
 - [ ] **Amit Kumar Sikder**, Hidayet Aksu, A. Selcuk Uluagac: </br>
     **6thSense: A Context-aware Sensor-based Attack Detector for Smart Devices.**
 
-### ***Authentication***
+### [***Authentication***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2017/Authentication)
 
 - [ ] **Bradley Reaves**, Logan Blue, Hadi Abdullah, Luis Vargas, Patrick Traynor, Thomas Shrimpton: </br>
     **AuthentiCall: Efficient Identity and Content Authentication for Phone Calls.**
 
-### ***Software Security***
+### [***Software Security***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2017/Software%20Security)
 
 - [ ] **Xiangkun Jia**, Chao Zhang, Purui Su, Yi Yang, Huafeng Huang, Dengguo Feng: </br>
     **Towards Efficient Heap Overflow Discovery.**
 
-### ***Understanding Attacks***
+### [***Understanding Attacks***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2017/Understanding%20Attacks)
 
 - [ ] **Manos Antonakakis**, Tim April, Michael Bailey, Matt Bernhard, Elie Bursztein, Jaime Cochran, Zakir Durumeric, J. Alex Halderman, Luca Invernizzi, Michalis Kallitsis, Deepak Kumar, Chaz Lever, Zane Ma, Joshua Mason, Damian Menscher, Chad Seaman, Nick Sullivan, Kurt Thomas, Yi Zhou: </br>
     **Understanding the Mirai Botnet.**
 
-### ***Hardware Security***
+### [***Hardware Security***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2017/Hardware%20Security)
 
 - [ ] **Christian Bayens**, Tuan Le, Luis Garcia, Raheem A. Beyah, Mehdi Javanmard, Saman A. Zonouz: </br>
     **See No Evil, Hear No Evil, Feel No Evil, Print No Evil? Malicious Fill Patterns Detection in Additive Manufacturing.**
 
-## 27th USENIX Security Symposium 2018: Baltimore, MD, USA
+## [27th USENIX Security Symposium 2018: Baltimore, MD, USA](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2018)
 
-### ***Security Impacting the Physical World***
+### [***Security Impacting the Physical World***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2018/Security%20Impacting%20the%20Physical%20World)
 
 - [ ] **Saleh Soltan**, Prateek Mittal, H. Vincent Poor: </br>
     **BlackIoT: IoT Botnet of High Wattage Devices Can Disrupt the Power Grid.**
@@ -50,7 +50,7 @@
 - [ ] **Deepak Kumar**, Riccardo Paccagnella, Paul Murley, Eric Hennenfent, Joshua Mason, Adam Bates, Michael Bailey: </br>
     **Skill Squatting Attacks on Amazon Alexa.**
 
-### ***Understanding How Humans Authenticate***
+### [***Understanding How Humans Authenticate***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2018/Understanding%20How%20Humans%20Authenticate)
 
 - [ ] **Sanam Ghorbani Lyastani**, Michael Schilling, Sascha Fahl, Michael Backes, Sven Bugiel: </br>
     **Better managed than memorized? Studying the Impact of Managers on Password Strength and Reuse.**
@@ -61,7 +61,7 @@
 - [ ] **Weijia He**, Maximilian Golla, Roshni Padhi, Jordan Ofek, Markus Dürmuth, Earlence Fernandes, Blase Ur: </br>
     **Rethinking Access Control and Authentication for the Home Internet of Things (IoT).**
 
-### ***Vulnerability Discovery***
+### [***Vulnerability Discovery***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2018/Vulnerability%20Discovery)
 
 - [ ] **Dave (Jing) Tian**, Grant Hernandez, Joseph I. Choi, Vanessa Frost, Christie Ruales, Patrick Traynor, Hayawardh Vijayakumar, Lee Harrison, Amir Rahmati, Michael Grace, Kevin R. B. Butler: </br>
     **ATtention Spanned: Comprehensive Vulnerability Analysis of AT Commands Within the Android Ecosystem.**
@@ -73,7 +73,7 @@
     **Acquisitional Rule-based Engine for Discovering Internet-of-Thing Devices.**
 
 
-### ***Information Tracking***
+### [***Information Tracking***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2018/Information%20Tracking)
 
 - [ ] **Xiang Pan**, Yinzhi Cao, Xuechao Du, Boyuan He, Gan Fang, Rui Shao, Yan Chen: </br>
     **FlowCog: Context-aware Semantics Extraction and Analysis of Information Flow Leaks in Android Apps.**
@@ -81,7 +81,7 @@
 - [ ] **Z. Berkay Celik**, Leonardo Babun, Amit Kumar Sikder, Hidayet Aksu, Gang Tan, Patrick D. McDaniel, A. Selcuk Uluagac: </br>
     **Sensitive Information Tracking in Commodity IoT.**
 
-### ***Vulnerability Mitigations***
+### [***Vulnerability Mitigations***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2018/Vulnerability%20Mitigations)
 
 - [ ] **Anh Quach**, Aravind Prakash, Lok-Kwong Yan: </br>
     **Debloating Software through Piece-Wise Compilation and Loading.**
@@ -95,14 +95,14 @@
 - [ ] **Dongliang Mu**, Alejandro Cuevas, Limin Yang, Hang Hu, Xinyu Xing, Bing Mao, Gang Wang: </br>
     **Understanding the Reproducibility of Crowd-reported Security Vulnerabilities.**
 
-### ***Web and Network Measurement***
+### [***Web and Network Measurement***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2018/Web%20and%20Network%20Measurement)
 
 - [ ] **Baojun Liu**, Chaoyi Lu, Hai-Xin Duan, Ying Liu, Zhou Li, Shuang Hao, Min Yang: </br>
     **Who Is Answering My Queries: Understanding and Characterizing Interception of the DNS Resolution Path.**
 
-## 28th USENIX Security Symposium 2019: Santa Clara, CA, USA
+## [28th USENIX Security Symposium 2019: Santa Clara, CA, USA](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2019)
 
-### ***Wireless Security***
+### [***Wireless Security***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2019/Wireless%20Security)
 
 - [ ] **Pallavi Sivakumaran**, Jorge Blasco: </br>
     **A Study of the Feasibility of Co-located App Attacks against BLE and a Large-Scale Analysis of the Current Application-Layer Security Landscape.**
@@ -113,7 +113,7 @@
 - [ ] **Hojoon Yang**, Sangwook Bae, Mincheol Son, Hongil Kim, Song Min Kim, Yongdae Kim: </br>
     **Hiding in Plain Signal: Physical Signal Overshadowing Attack on LTE.**
 
-### ***Protecting Users Everywhere***
+### [***Protecting Users Everywhere***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2019/Protecting%20Users%20Everywhere)
 
 - [ ] **Noah Apthorpe**, Sarah Varghese, Nick Feamster: </br>
     **Evaluating the Contextual Integrity of Privacy Regulation: Parents' IoT Toy Privacy Norms Versus COPPA.**
@@ -124,22 +124,22 @@
 - [ ] **Eric Zeng**, Franziska Roesner: </br>
     **Understanding and Improving Security and Privacy in Multi-User Smart Homes: A Design Exploration and In-Home User Study.**
 
-### ***Hardware Security***
+### [***Hardware Security***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2019/Hardware%20Security)
 
 - [ ] **Mustakimur Khandaker**, Wenqing Liu, Abu Naser, Zhi Wang, Jie Yang: </br>
     **Origin-sensitive Control Flow Integrity.**
 
-### ***Mobile Security 1***
+### [***Mobile Security 1***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2019/Mobile%20Security%201)
 
 - [ ] **Joel Reardon**, Álvaro Feal, Primal Wijesekera, Amit Elazari Bar On, Narseo Vallina-Rodriguez, Serge Egelman: </br>
     **50 Ways to Leak Your Data: An Exploration of Apps' Circumvention of the Android Permissions System.**
 
-### ***Mobile Security 2***
+### [***Mobile Security 2***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2019/Mobile%20Security%202)
 
 - [ ] **Yeonjoon Lee**, Xueqiang Wang, Kwangwuk Lee, Xiaojing Liao, XiaoFeng Wang, Tongxin Li, Xianghang Mi: </br>
     **Understanding iOS-based Crowdturfing Through Hidden UI Analysis.**
 
-### ***Intelligence and Vulnerabilities***
+### [***Intelligence and Vulnerabilities***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2019/Intelligence%20and%20Vulnerabilities)
 
 - [ ] **Vector Guo Li**, Matthew Dunn, Paul Pearce, Damon McCoy, Geoffrey M. Voelker, Stefan Savage: </br>
     **Reading the Tea leaves: A Comparative Analysis of Threat Intelligence.**
@@ -150,7 +150,7 @@
 - [ ] **Xuan Feng**, Xiaojing Liao, XiaoFeng Wang, Haining Wang, Qiang Li, Kai Yang, Hongsong Zhu, Limin Sun: </br>
     **Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.**
 
-### ***Web Attacks***
+### [***Web Attacks***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2019/Web%20Attacks)
 
 - [ ] **Mingxue Zhang**, Wei Meng, Sangho Lee, Byoungyoung Lee, Xinyu Xing: </br>
     **All Your Clicks Belong to Me: Investigating Click Interception on the Web.**
@@ -161,7 +161,7 @@
 - [ ] **Markus Zimmermann**, Cristian-Alexandru Staicu, Cam Tenny, Michael Pradel: </br>
     **Small World with High Risks: A Study of Security Threats in the npm Ecosystem.**
 
-### ***IoT Security***
+### [***IoT Security***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2019/IoT%20Security)
 
 - [ ] **Yaowen Zheng**, Ali Davanian, Heng Yin, Chengyu Song, Hongsong Zhu, Limin Sun: </br>
     **FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation.**
@@ -178,12 +178,12 @@
 - [ ] **Deepak Kumar**, Kelly Shen, Benton Case, Deepali Garg, Galina Alperovich, Dmitry Kuznetsov, Rajarshi Gupta, Zakir Durumeric: </br>
     **All Things Considered: An Analysis of IoT Devices on Home Networks.**
 
-### ***Crypto Means Cryptography***
+### [***Crypto Means Cryptography***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2019/Crypto%20Means%20Cryptography)
 
 - [ ] **Sam Kumar**, Yuncong Hu, Michael P. Andersen, Raluca Ada Popa, David E. Culler: </br>
     **JEDI: Many-to-Many End-to-End Encryption and Key Delegation for IoT.**
 
-### ***Passwords***
+### [***Passwords***](https://github.com/jiaoruohong/readinglist/tree/master/USENIX/2019/Passwords)
 
 - [ ] **Ding Wang**, Ping Wang, Debiao He, Yuan Tian: </br>
     **Birthday, Name and Bifacial-security: Understanding Passwords of Chinese Web Users.**
