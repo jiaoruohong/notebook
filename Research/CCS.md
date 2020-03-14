@@ -216,7 +216,7 @@
 ### ***Session 4D: Formal Analysis II***
 
 - [ ] **Susan Hohenberger**, Satyanarayana Vusirikala: </br>
-    **Are These Pairing Elements Correct? Automated Verification and Applications.**
+    **Are These Pairing Elements Correct?: Automated Verification and Applications.**
 
 - [ ] **Sjouke Mauw**, Zach Smith, Jorge Toro-Pozo, Rolando Trujillo-Rasua: </br>
     **Post-Collusion Security and Distance Bounding.**
