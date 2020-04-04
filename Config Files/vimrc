@@ -1,0 +1,363 @@
+" ~/.vimrc
+" author: Ruohong Jiao
+" github: github.jiaoruohong
+
+" Vundle Settings
+" ----------------------------------------
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+let vpath='~/.vim/bundle'
+
+call vundle#begin(vpath)
+Plugin 'VundleVim/Vundle.vim'
+
+" Files management
+" ----------------------------------------
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+
+" Appearance
+" ----------------------------------------
+Plugin 'vim-airline/vim-airline'
+
+" Coding
+" ----------------------------------------
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'fholgado/minibufexpl.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-sensible'
+Plugin 'scrooloose/syntastic'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'nvie/vim-flake8'
+
+" LaTeX
+" ----------------------------------------
+Plugin 'lervag/vimtex'
+
+" Markdown
+" ----------------------------------------
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'godlygeek/tabular'
+Plugin 'tpope/vim-surround'
+
+" Themes
+" ----------------------------------------
+Plugin 'arcticicestudio/nord-vim'
+Plugin 'hzchirs/vim-material'
+Plugin 'dracula/vim', { 'name': 'dracula' }
+Plugin 'cormacrelf/vim-colors-github'
+Plugin 'kristijanhusak/vim-hybrid-material'
+Plugin 'morhetz/gruvbox'
+
+call vundle#end()
+
+filetype plugin indent on
+
+" Colors
+" ----------------------------------------
+"set t_Co=256
+
+if (has("termguicolors"))
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+else
+    set t_Co=256
+endif
+
+" Base
+" ----------------------------------------
+syntax enable
+syntax on
+set number
+set showmatch
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set autoindent
+set ai!
+set noerrorbells
+set colorcolumn=80,100
+set scrolloff=3
+" Highlight search results
+" ----------------------------------------
+set hlsearch
+set incsearch
+
+" ----------------------------------------
+set ruler
+" UTF-8 Support
+" ----------------------------------------
+set encoding=utf-8
+" split directions
+" ----------------------------------------
+set splitbelow
+set splitright
+" Enable folding
+" ----------------------------------------
+set foldmethod=indent
+set foldlevel=99
+" System Clipboard
+" ----------------------------------------
+set clipboard=unnamedplus
+set mouse=v
+" split navigations
+" ----------------------------------------
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K> 
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+" Enable folding with the spacebar
+" ----------------------------------------
+nnoremap <space> za
+
+
+" NERDTree Settings
+" ----------------------------------------
+map <C-b> :NERDTreeToggle<CR>
+map <C-n> :tabnew<CR>
+map <S-Right> :tabn<CR>
+map <S-Left> :tabp<CR>
+
+" SimpyFold settings
+" ----------------------------------------
+let g:SimpylFold_docstring_preview=1
+
+" Tagbar settings
+" ----------------------------------------
+map <F8> :TagbarToggle<CR>
+
+" UltiSnip settings
+" ----------------------------------------
+"set runtimepath+=/usr/share/vim/my-snippets/
+"let g:UltiSnipsSnippetsDir='/usr/share/vim/my-snippets/'
+"let g:UltiSnipsSnippetDirectories=["my-snippets"]
+let g:UltiSnipsEditSplit='vertical'
+let g:UltiSnipsExpandTrigger="<c-e>"
+let g:UltiSnipsJumpForwardTrigger="<c-f>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+
+" YouCompleteMe settings
+" ----------------------------------------
+" - Let YCM read tags from Ctags file
+let g:ycm_collect_identifiers_from_tags_files = 1
+" - Default 1, just ensure
+let g:ycm_use_ultisnips_completer = 1
+" - Completion for programming language's keyword
+let g:ycm_seed_identifiers_with_syntax = 1
+" - Completion in comments
+let g:ycm_complete_in_comments = 1
+" - Completion in string
+let g:ycm_complete_in_strings = 1
+
+let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
+
+" - Goto definition with F3
+map <F3> :YcmCompleter GoTo<CR>
+
+" Python Settings
+"let g:ycm_server_python_interpreter='/usr/bin/python'
+"let g:ycm_python_interpreter_path = '~/anaconda3/envs/py36/bin/python'
+"let g:ycm_python_sys_path = ['~/anaconda3/envs/py36/lib/python3.6/site-packages']
+""let g:ycm_extra_conf_vim_data = [
+""  \  'g:ycm_python_interpreter_path',
+""  \  'g:ycm_python_sys_path'
+""  \]
+""let g:ycm_global_ycm_extra_conf = '~/global_extra_conf.py'
+"let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+
+" Vim-Flake8
+" ----------------------------------------
+autocmd BufWritePost *.py call Flake8()
+
+" VimTex
+" ----------------------------------------
+let g:tex_flavor='latex'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
+let g:vimtex_complete_bib = { 'simple': 1 }
+
+" Vim-Polyglot
+" ----------------------------------------
+let g:polyglot_disabled = ['latex']
+
+" Goyo
+" ----------------------------------------
+" default: 80
+let g:goyo_width = 80
+" default: 85%
+let g:goyo_height = 0.85
+" default: 0
+let g:goyo_linenr = 0
+
+" Limelight
+" ----------------------------------------
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+" Color name (:help gui-colors) or RGB color
+let g:limelight_conceal_guifg = 'DarkGray'
+let g:limelight_conceal_guifg = '#777777'
+" Default: 0.5
+let g:limelight_default_coefficient = 0.7
+" Number of preceding/following paragraphs to include (default: 0)
+let g:limelight_paragraph_span = 1
+" Beginning/end of paragraph
+"   When there's no empty line between the paragraphs
+"   and each paragraph starts with indentation
+let g:limelight_bop = '^\s'
+let g:limelight_eop = '\ze\n^\s'
+" Highlighting priority (default: 10)
+"   Set it to -1 not to overrule hlsearch
+let g:limelight_priority = -1
+" Using Limelight when Goyo is started
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+" Theme
+" ----------------------------------------
+"set background=[dark,light]
+"colorschem X
+"let g:airline_theme='X'
+"highlight ColorColumn ctermbg=0 guibg=black
+
+" Nord-Vim
+" ----------------------------------------
+" https://github.com/arcticicestudio/nord-vim
+"colorschem nord
+"let g:lightline = { 'colorscheme': 'nord' }
+
+" Vim-Material
+" ----------------------------------------
+" https://github.com/hzchirs/vim-material
+" Dark
+"set background=dark
+"colorscheme vim-material
+"let g:airline_theme='material'
+"let g:lightline = { 'colorscheme': 'vim-material' }
+
+" Palenight
+"let g:material_style='palenight'
+"set background=dark
+"colorscheme vim-material
+"let g:airline_theme='material'
+"let g:lightline = { 'colorscheme': 'vim-material' }
+
+" Oceanic
+"let g:material_style='oceanic'
+"set background=dark
+"colorscheme vim-material
+"let g:airline_theme='material'
+"let g:lightline = { 'colorscheme': 'vim-material' }
+
+" Light
+"set background=light
+"colorscheme vim-material
+"let g:airline_theme='material'
+"let g:lightline = { 'colorscheme': 'vim-material' }
+
+" Dracula
+" ----------------------------------------
+" https://github.com/dracula/vim
+colorschem dracula
+let g:lightline = { 'colorscheme': 'dracula' }
+
+" Vim-Colors-Github
+" ----------------------------------------
+" https://github.com/cormacrelf/vim-colors-github
+" Github Rust
+"let g:github_colors_soft = 0
+"let g:github_colors_block_diffmark = 0
+"colorscheme github
+"let g:airline_theme = "github"
+"let g:lightline = { 'colorscheme': 'github' }
+
+" Github C
+"let g:github_colors_soft = 0
+"let g:github_colors_block_diffmark = 1
+"colorscheme github
+"let g:airline_theme = "github"
+"let g:lightline = { 'colorscheme': 'github' }
+
+" Github Soft
+"let g:github_colors_soft = 1
+"let g:github_colors_block_diffmark = 0
+"colorscheme github
+"let g:airline_theme = "github"
+"let g:lightline = { 'colorscheme': 'github' }
+
+" Github Diff
+"let g:github_colors_soft = 1
+"let g:github_colors_block_diffmark = 1
+"colorscheme github
+"let g:airline_theme = "github"
+"let g:lightline = { 'colorscheme': 'github' }
+
+" Vim-Hybrid-Material
+" ----------------------------------------
+" https://github.com/kristijanhusak/vim-hybrid-material
+"Options:
+"If you would like some of the code to be bolded, like functions and language controls, add this option to vimrc:
+"let g:enable_bold_font = 1
+"If you want comments to be in italic, also add this:
+"let g:enable_italic_font = 1
+"To use transparent background, add this option:
+"let g:hybrid_transparent_background = 1
+
+"let g:enable_bold_font = 1
+"let g:enable_italic_font = 1
+"let g:hybrid_transparent_background = 1
+
+" Hybrid Material
+"set background=dark
+"colorscheme hybrid_material
+"let g:airline_theme = "dracula"
+"let g:lightline = { 'colorscheme': 'hybrid_material' }
+
+" Hybrid Reverse
+"set background=dark
+"colorscheme hybrid_reverse
+"let g:airline_theme = "dracula"
+"let g:lightline = { 'colorscheme': 'hybrid_reverse' }
+
+" Hybrid Material Light
+"set background=light
+"colorscheme hybrid_material
+"let g:airline_theme = "dracula"
+"let g:lightline = { 'colorscheme': 'hybrid_material' }
+
+" Gruvbox
+" ----------------------------------------
+" https://github.com/morhetz/gruvbox
+" https://github.com/morhetz/gruvbox/wiki/Configuration#ggruvbox_contrast_dark
+" Gruvbox Dark
+"set background=dark
+"colorscheme gruvbox
+"let g:airline_theme = "gruvbox"
+"let g:lightline = { 'colorscheme': 'gruvbox' }
+
+" Gruvbox Light
+"set background=light
+"colorscheme gruvbox
+"let g:airline_theme = "gruvbox"
+"let g:lightline = { 'colorscheme': 'gruvbox' }

@@ -1,0 +1,12 @@
+[user]
+    name = jiaoruohong
+    email = jrh108@163.com
+[core]
+	editor = vim
+[push]
+    default = simple
+[http]
+    proxy = socks5://127.0.0.1:1080
+[https]
+    proxy = socks5://127.0.0.1:1080
+
