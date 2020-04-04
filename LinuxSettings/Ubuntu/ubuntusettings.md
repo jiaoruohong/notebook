@@ -1,3 +1,11 @@
+---
+title: "Ubuntu Settings"
+author: [Ruohong Jiao]
+date: "2020-04-03"
+keywords: [Initialize]
+titlepage: true
+titlepage-rule-color: "360049"
+...
 # Establish a Ubuntu 18.04 Server
 
 ## Ubuntu Server
