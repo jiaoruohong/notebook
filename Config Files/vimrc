@@ -73,8 +73,6 @@ filetype plugin indent on
 
 " Colors
 " ----------------------------------------
-"set t_Co=256
-
 if (has("termguicolors"))
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -91,6 +89,8 @@ set number
 set showmatch
 set smartindent
 set tabstop=4
+set ts=4
+set expandtab
 set shiftwidth=4
 set autoindent
 set ai!
@@ -134,8 +134,8 @@ nnoremap <space> za
 " ----------------------------------------
 map <C-b> :NERDTreeToggle<CR>
 map <C-n> :tabnew<CR>
-map <S-Right> :tabn<CR>
-map <S-Left> :tabp<CR>
+map <S-n> :tabn<CR>
+map <S-p> :tabp<CR>
 
 " SimpyFold settings
 " ----------------------------------------
