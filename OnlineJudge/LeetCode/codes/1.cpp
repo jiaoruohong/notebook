@@ -1,7 +1,10 @@
+#include <algorithm>
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
 #include <iostream>
+#include <queue>
+#include <stack>
 #include <string>
 #include <vector>
 
@@ -22,20 +25,18 @@ class Solution {
         }
     return ans;
   }
-
   void input(void) {
-    int t;
     while (~scanf("%d %d", &n, &m))
       for (int i = 0; i < n; i++) {
         scanf("%d", &t);
         numbers.push_back(t);
       }
   }
-  void manage(void) { twoSum(numbers, m); }
-  void output(void) { printf("%d %d\n", u, v); }
+  void solve(void) { twoSum(numbers, m); }
+  void otput(void) { printf("%d %d\n", u, v); }
 
  private:
-  int n, m;
+  int n, m, t;
   int u, v;
   vector<int> numbers;
 };
@@ -44,11 +45,11 @@ int main() {
   freopen("./assets/fipt.txt", "r", stdin);
   freopen("./assets/fopt.txt", "w", stdout);
 
-  Solution solve;
+  Solution sol;
 
-  solve.input();
-  solve.manage();
-  solve.output();
+  sol.input();
+  sol.solve();
+  sol.otput();
 
   return 0;
 }

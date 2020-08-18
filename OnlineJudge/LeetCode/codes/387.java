@@ -5,17 +5,21 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 class Solution {
-  public int[] twoSum(int[] nums, int target) {
-    int[] ans = new int[2];
-    for (int i = 0; i < nums.length; i++)
-      for (int j = i + 1; j < nums.length; j++)
-        if (nums[i] + nums[j] == target) {
-          u = i;
-          v = j;
-          ans[0] = i;
-          ans[1] = j;
-          break;
+  public int firstUniqChar(String s) {
+    int ans = -1;
+    int u, v;
+    for (char ch = 'a'; ch <= 'z'; ch++) {
+      u = s.indexOf(ch);
+      v = s.lastIndexOf(ch);
+      if (u == v && u != -1) {
+        if (ans == -1) {
+          ans = u;
+        } else {
+          if (u < ans)
+            ans = u;
         }
+      }
+    }
     return ans;
   }
 
@@ -29,28 +33,26 @@ class Solution {
     Solution sol = new Solution();
 
     sol.input();
-    sol.solve();
-    sol.otput();
   }
 
   public void input() {
     Scanner in = new Scanner(System.in);
     while (in.hasNext()) {
-      n = in.nextInt();
-      m = in.nextInt();
-      for (int i = 0; i < n; i++)
-        numbers[i] = in.nextInt();
+      String str = in.nextLine();
+      solve(str);
     }
 
     in.close();
   }
 
-  public void solve() {
-    twoSum(numbers, m);
+  public void solve(String s) {
+    int res;
+    res = firstUniqChar(s);
+    otput(res);
   }
 
-  public void otput() {
-    System.out.println(u + " " + v);
+  public void otput(int idx) {
+    System.out.println(idx);
   }
 
   private int n, m, t;
