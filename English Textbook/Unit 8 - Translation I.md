@@ -1,7 +1,0 @@
-# Unit 8 - Translation I
-
-## I. Put the following text into Chinese
-
-The word “science” seems to contain some magic power; if put forward, it should bring about immediate consent, with no possible discussion. This situation is exploited for advertisement, but it is basically unsound. Science is not a creed. It was not revealed to man by some superior deity. Science is a product of the human brain, and as such, it is always open to discussion and possible revision. There is no absolute truth in it: rather relativity is its rule. It represents a logical summary of human knowledge, based on human observation and experience, both of which are always of limited range and finite accuracy. As for the logic introduced into the classification of empirical facts, it is typically a product of our brain. We select experimental results that appear to us as logically connect together, and we ignore many facts that do not fit into our “logic”. This rather artificial procedure is our own invention and we are so proud of it that we insist its results should be considered as “laws of nature”.
-
-科学这个词似乎具有某种魅力。它一旦被提出，就应该立即得到认可，而不允许有任何可能的讨论这种需要人们立即认可的情况出现在广告中，但是基本上不合情理。要知道，科学不 是一种信条，也不是神灵向人类的揭示物。它是人类思维的产物，因此是可以讨论和修正的。科学无绝对真理，科学的真理，总是相对的。它以人的观察和经验为基础，对人类知识进行逻辑性的总结，然而人的观察和经验总是有限的而且缺少一定的精确性。至于那些用来对经验事实进行归类的逻辑则完全是我们大脑的产物。我们选择我们认为有着逻辑联系的实验结果，而忽略许多不符合我们自己“逻辑”的事实。这种相当人为的选择结果是我们自己的事情。对此，我们非常得意，以至于主张这些人为选择的结果应该被当做“自然规律”来对待。
