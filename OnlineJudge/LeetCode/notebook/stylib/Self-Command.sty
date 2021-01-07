@@ -1,0 +1,34 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Self Command
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Set Background Picture
+%------------------------------------------------------------------------------
+\usepackage{transparent}
+\usepackage{eso-pic}
+
+\newcommand{\BackgroundPic}[1]{%
+\AddToShipoutPicture*{
+\put(0,0){%
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\centering
+{\transparent{0.8} \includegraphics[%
+width=\paperwidth,%
+%height=\paperheight,%
+keepaspectratio]{%
+#1}}%
+\vfill
+}}}}
+
+% Set Blankpage
+%------------------------------------------------------------------------------
+\usepackage{afterpage}
+
+\newcommand\blankpage{
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-1}
+    \newpage
+}
+

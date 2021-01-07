@@ -1,0 +1,43 @@
+% \documentclass[10pt]{ctexart}
+\documentclass[10pt,titlepage]{ctexart}
+% \documentclass[10pt,twocolumn]{ctexart}
+% \documentclass[10pt,twocolumn,titlepage]{ctexart}
+
+\usepackage{./stylib/Page-Layout}
+\usepackage{./stylib/Sty-Pkg}
+\usepackage{./stylib/Self-Command}
+\usepackage{./stylib/note}
+
+\input{./part/fm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \AddToShipoutPicture*{\BackgroundPic{path2pic}}
+% \blankpage
+
+\maketitle
+
+% %-------------------------------------------------------------------------------
+% \begin{abstract}
+% %-------------------------------------------------------------------------------
+% Your abstract text goes here. Just a few facts. Whet our appetites.
+% Not more than 200 words, if possible, and preferably closer to 150.
+% \end{abstract}
+
+\tableofcontents
+\newpage
+
+%-------------------------------------------------------------------------------
+\begin{appendices}
+\section{Problem List}\label{app:problemlist}
+\input{./assets/file/des.tex}
+
+\section{Code List}\label{app:codelist}
+\input{./assets/file/sol.tex}
+\end{appendices}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

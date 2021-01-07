@@ -1,0 +1,956 @@
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 1}}\label{app:problemlist:leetcode:1}
+
+\textbf{Problem Description:}\par
+
+\textbf{两数之和}\par
+
+给定一个整数数组 $ nums $ 和一个目标值 $ target $ ，
+请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。\par
+
+你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+给定 nums = [2, 7, 11, 15], target = 9
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+因为 nums[0] + nums[1] = 2 + 7 = 9
+所以返回 [0, 1]
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:1}):\par
+
+没有说明输入数字一定是正整数，不能先排序后提取小于 $ target $ 的数进行求解。\par
+
+懒一点， $ n^{2} $ 循环。勤快一点用红黑树、堆进行存储然后查询 $ nlogn $ 。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 2}}\label{app:problemlist:leetcode:2}
+
+\textbf{Problem Description:}\par
+
+\textbf{两数相加}\par
+
+给出两个非空的链表用来表示两个非负的整数。其中，它们各自的位数是按照逆序的方式存储的，并且它们的每个节点只能存储一位数字。\par
+
+如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。\par
+
+您可以假设除了数字0之外，这两个数都不会以0开头。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+输入：(2 -> 4 -> 3) + (5 -> 6 -> 4)
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+输出：7 -> 0 -> 8
+原因：342 + 465 = 807
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:2}):\par
+
+大数加法，注意指针/引用转换。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 3}}\label{app:problemlist:leetcode:3}
+
+\textbf{Problem Description:}\par
+
+\textbf{无重复字符的最长子串}\par
+
+给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+输入: "abcabcbb"
+
+输入: "bbbbb"
+
+输入: "pwwkew"
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+输出: 3 
+解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
+
+输出: 1
+解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。
+
+输出: 3
+解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。
+     请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:3}):\par
+
+标记l和r，遍历一遍，更新答案。时间方面，能用数组不用STL。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 6}}\label{app:problemlist:leetcode:6}
+
+\textbf{Problem Description:}\par
+
+\textbf{Z字形变换}\par
+
+将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。\par
+
+比如输入字符串为 "LEETCODEISHIRING" 行数为 3 时，排列如下：\par
+
+\begin{lstlisting}[language=bash]
+L   C   I   R
+E T O E S I I G
+E   D   H   N
+\end{lstlisting}
+
+之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如："LCIRETOESIIGEDHN"。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+输入: s = "LEETCODEISHIRING", numRows = 3
+  
+输入: s = "LEETCODEISHIRING", numRows = 4
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+输出: "LCIRETOESIIGEDHN"
+
+输出: "LDREOEIIECIHNTSG"
+解释:
+
+L     D     R
+E   O E   I I
+E C   I H   N
+T     S     G
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:6}):\par
+
+计算第一行字符id，前后搜查。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 11}}\label{app:problemlist:leetcode:11}
+
+\textbf{Problem Description:}\par
+
+\textbf{盛最多水的容器}\par
+
+给你n个非负整数 $ a1, a2, \cdots, an $ ，每个数代表坐标中的一个点 $ (i, ai) $ 。
+在坐标内画n条垂直线，垂直线i的两个端点分别为 $ (i, ai) $ 和 $ (i, 0) $。
+找出其中的两条线，使得它们与x轴共同构成的容器可以容纳最多的水。\par
+
+说明：你不能倾斜容器，且 n 的值至少为 2。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+输入：[1,8,6,2,5,4,8,3,7]
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+输出：49
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:11}):\par
+
+两边到中间遍历一遍，贪心选择更高的边维持原状。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 15}}\label{app:problemlist:leetcode:15}
+
+\textbf{Problem Description:}\par
+
+\textbf{三数之和}\par
+
+给你一个包含n个整数的数组nums，判断nums中是否存在三个元素 $ a, b, c $ ，
+使得 $ a + b + c = 0 $ ？
+请你找出所有满足条件且不重复的三元组。\par
+
+注意：答案中不可以包含重复的三元组。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+给定数组 nums = [-1, 0, 1, 2, -1, -4]，
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+满足要求的三元组集合为：
+[
+  [-1, 0, 1],
+  [-1, -1, 2]
+]
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:15}):\par
+
+不要依赖STL，不是所有题目都需要离散化处理。对于一般的链表问题，去重遍历就可以达到离散化的效果。\par
+
+先排序，指定一个数值的基础上再挑选符合条件的另外两个数值。贪心匹配两个数值的大小。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 16}}\label{app:problemlist:leetcode:16}
+
+\textbf{Problem Description:}\par
+
+\textbf{最接近的三数之和}\par
+
+给定一个包括n个整数的数组nums和 一个目标值target。
+找出nums中的三个整数，使得它们的和与target最接近。
+返回这三个数的和。假定每组输入只存在唯一答案。\par
+
+提示：\par
+
+$$ 3 <= nums.length <= 10^{3} $$
+$$ -10^{3} <= nums[i] <= 10^{3} $$
+$$ -10^{4} <= target <= 10^{4} $$
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+输入：nums = [-1,2,1,-4], target = 1
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+输出：2
+解释：与 target 最接近的和是 2 (-1 + 2 + 1 = 2) 。
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:16}):\par
+
+不要依赖STL，不是所有题目都需要离散化处理。对于一般的链表问题，去重遍历就可以达到离散化的效果。\par
+
+先排序，指定一个数值的基础上再挑选符合条件的另外两个数值。贪心匹配两个数值的大小。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 19}}\label{app:problemlist:leetcode:19}
+
+\textbf{Problem Description:}\par
+
+\textbf{Problem Description:}\par
+
+\textbf{删除链表的倒数第N个节点}\par
+
+给定一个链表，删除链表的倒数第n个节点，并且返回链表的头结点。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+给定一个链表: 1->2->3->4->5, 和 n = 2.
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+当删除了倒数第二个节点后，链表变为 1->2->3->5.
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:19}):\par
+
+递归记录个数。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 25}}\label{app:problemlist:leetcode:25}
+
+\textbf{Problem Description:}\par
+
+\textbf{Problem Description:}\par
+
+\textbf{K 个一组翻转链表}\par
+
+给你一个链表，每k个节点一组进行翻转，请你返回翻转后的链表。\par
+
+k是一个正整数，它的值小于或等于链表的长度。\par
+
+如果节点总数不是k的整数倍，那么请将最后剩余的节点保持原有顺序。\par
+
+说明：\par
+
+你的算法只能使用常数的额外空间。\par
+
+你不能只是单纯的改变节点内部的值，而是需要实际进行节点交换。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+给你这个链表：1->2->3->4->5
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+当 k = 2 时，应当返回: 2->1->4->3->5
+
+当 k = 3 时，应当返回: 3->2->1->4->5
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:25}):\par
+
+标记子链表首尾，化简为链表反转问题，递归解决。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 26}}\label{app:problemlist:leetcode:26}
+
+\textbf{Problem Description:}\par
+
+\textbf{删除排序数组中的重复项}\par
+
+给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。\par
+
+不要使用额外的数组空间，你必须在原地修改输入数组 并在使用 $ O(1) $ 额外空间的条件下完成。\par
+
+说明:\par
+
+为什么返回数值是整数，但输出的答案是数组呢?\par
+
+请注意，输入数组是以引用方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。\par
+
+你可以想象内部操作如下:\par
+
+\begin{lstlisting}[language=bash]
+输入：nums = [-1,2,1,-4], target = 1
+
+// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝
+int len = removeDuplicates(nums);
+
+// 在函数里修改输入数组对于调用者是可见的。
+// 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。
+for (int i = 0; i < len; i++) {
+    print(nums[i]);
+}
+\end{lstlisting}
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+给定数组 nums = [1,1,2], 
+
+给定 nums = [0,0,1,1,1,2,2,3,3,4],
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。 
+你不需要考虑数组中超出新长度后面的元素。
+
+函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。
+你不需要考虑数组中超出新长度后面的元素。
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:26}):\par
+
+原始数组已经排过序了。注意当数据量大的时候，判断条件越少越好。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 42}}\label{app:problemlist:leetcode:42}
+
+\textbf{Problem Description:}\par
+
+\textbf{接雨水}\par
+
+给定n个非负整数表示每个宽度为1的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。\par
+
+上面是由数组 $ [0,1,0,2,1,0,1,3,2,1,2,1] $ 表示的高度图，
+在这种情况下，可以接6个单位的雨水（蓝色部分表示雨水）。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+输入: [0,1,0,2,1,0,1,3,2,1,2,1]
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+输出: 6
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:42}):\par
+
+左右打表记录最大值，查询之后得出结果。\par
+
+老问题，注意当数据量大的时候，判断条件越少越好。
+以及，多用C++11的新初始化特性可以减少时间开销。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 56}}\label{app:problemlist:leetcode:56}
+
+\textbf{Problem Description:}\par
+
+\textbf{合并区间}\par
+
+给出一个区间的集合，请合并所有重叠的区间。。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+输入: intervals = [[1,3],[2,6],[8,10],[15,18]]
+
+输入: intervals = [[1,4],[4,5]]
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+输出: [[1,6],[8,10],[15,18]]
+解释: 区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].
+
+输出: [[1,5]]
+解释: 区间 [1,4] 和 [4,5] 可被视为重叠区间。
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:56}):\par
+
+自定义排序之后合并。需要注意对是C++快排默认比较顺序是挨个从小到大，如果可以使用原始比较函数就不要自己重新写，还是用初始的更快。\par
+
+注意java的自定义比较函数。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 61}}\label{app:problemlist:leetcode:61}
+
+\textbf{Problem Description:}\par
+
+\textbf{旋转链表}\par
+
+给定一个链表，旋转链表，将链表每个节点向右移动k个位置，其中k是非负数。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+输入: 1->2->3->4->5->NULL, k = 2
+
+输入: 0->1->2->NULL, k = 4
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+输出: 4->5->1->2->3->NULL
+解释:
+向右旋转 1 步: 5->1->2->3->4->NULL
+向右旋转 2 步: 4->5->1->2->3->NULL
+
+输出: 2->0->1->NULL
+解释:
+向右旋转 1 步: 2->0->1->NULL
+向右旋转 2 步: 1->2->0->NULL
+向右旋转 3 步: 0->1->2->NULL
+向右旋转 4 步: 2->0->1->NULL
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:61}):\par
+
+对k取模得到mk，之后更改倒数第mk个node开始第子链表顺序到首位。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 121}}\label{app:problemlist:leetcode:121}
+
+\textbf{Problem Description:}\par
+
+\textbf{买卖股票的最佳时机}\par
+
+给定一个数组，它的第i个元素是一支给定股票第i天的价格。\par
+
+如果你最多只允许完成一笔交易（即买入和卖出一支股票一次），设计一个算法来计算你所能获取的最大利润。\par
+
+注意：你不能在买入股票前卖出股票。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+输入: [7,1,5,3,6,4]
+
+输入: [7,6,4,3,1]
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+输出: 5
+解释: 在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。
+     注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格；同时，你不能在买入前卖出股票。
+
+输出: 0
+解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:121}):\par
+
+从后向前打表记录最大值，查询之后得出结果。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 138}}\label{app:problemlist:leetcode:138}
+
+\textbf{Problem Description:}\par
+
+\textbf{复制带随机指针的链表}\par
+
+给定一个链表，每个节点包含一个额外增加的随机指针，该指针可以指向链表中的任何节点或空节点。\par
+
+要求返回这个链表的深拷贝。 \par
+
+我们用一个由n个节点组成的链表来表示输入/输出中的链表。每个节点用一个 $ [val, random_index] $ 表示：\par
+
+$ val $：一个表示 Node.val 的整数。\par
+$ random_index $：随机指针指向的节点索引（范围从0到n-1）；如果不指向任何节点，则为null 。\par
+
+$ -10000 <= Node.val <= 10000 $\par
+
+$ Node.random $ 为空（null）或指向链表中的节点。\par
+
+节点数目不超过1000。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+输入：head = [[7,null],[13,0],[11,4],[10,2],[1,0]]
+
+输入：head = [[1,1],[2,1]]
+输入：head = [[3,null],[3,0],[3,null]]
+输入：head = []
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+输出：[[7,null],[13,0],[11,4],[10,2],[1,0]]
+输出：[[1,1],[2,1]]
+输出：[[3,null],[3,0],[3,null]]
+输出：[]
+解释：给定的链表为空（空指针），因此返回 null。
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:138}):\par
+
+map存储节点pair。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 141}}\label{app:problemlist:leetcode:141}
+
+\textbf{Problem Description:}\par
+
+\textbf{环形链表}\par
+
+给定一个链表，判断链表中是否有环。\par
+
+为了表示给定链表中的环，我们使用整数pos来表示链表尾连接到链表中的位置（索引从0开始）。
+如果pos是-1，则在该链表中没有环。\par
+
+进阶：\par
+
+你能用 $ O(1) $ （即，常量）内存解决此问题吗？\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+输入：head = [3,2,0,-4], pos = 1
+
+输入：head = [1,2], pos = 0
+
+输入：head = [1], pos = -1
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+输出：true
+解释：链表中有一个环，其尾部连接到第二个节点。
+
+输出：true
+解释：链表中有一个环，其尾部连接到第一个节点。
+
+输出：false
+解释：链表中没有环。
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:141}):\par
+
+快慢指针循环跑圈相遇查重。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 202}}\label{app:problemlist:leetcode:202}
+
+\textbf{Problem Description:}\par
+
+\textbf{快乐数}\par
+
+编写一个算法来判断一个数n是不是快乐数。\par
+
+快乐数定义为：对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和，
+然后重复这个过程直到这个数变为1，也可能是无限循环但始终变不到1。
+如果可以变为1，那么这个数就是快乐数。\par
+
+如果 n 是快乐数就返回 True ；不是，则返回 False 。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+输入：19
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+输出：true
+解释：
+12 + 92 = 82
+82 + 22 = 68
+62 + 82 = 100
+12 + 02 + 02 = 1
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:202}):\par
+
+快慢指针循环跑圈相遇查重。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 206}}\label{app:problemlist:leetcode:206}
+
+\textbf{Problem Description:}\par
+
+\textbf{反转链表}\par
+
+反转一个单链表。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+输入: 1->2->3->4->5->NULL
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+输出: 5->4->3->2->1->NULL
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:206}):\par
+
+递归或先找到首尾节点之后while循环更新next。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 209}}\label{app:problemlist:leetcode:209}
+
+\textbf{Problem Description:}\par
+
+\textbf{长度最小的子数组}\par
+
+给定一个含有n个正整数的数组和一个正整数s，
+找出该数组中满足其和 $ >= s $ 的长度最小的连续子数组，并返回其长度。
+如果不存在符合条件的子数组，返回 0。\par
+
+进阶：\par
+
+如果你已经完成了 $ O(n) $ 时间复杂度的解法, 请尝试 $ O(n log n) $ 时间复杂度的解法。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+输入：s = 7, nums = [2,3,1,2,4,3]
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+输出：2
+解释：子数组 [4,3] 是该条件下的长度最小的子数组。
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:209}):\par
+
+遍历一遍，滑动窗口更新数值。\par
+
+或者前缀和，二分搜索数值。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 387}}\label{app:problemlist:leetcode:387}
+
+\textbf{Problem Description:}\par
+
+\textbf{字符串中的第一个唯一字符}\par
+
+给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 $ -1 $ 。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+leetcode
+loveleetcode
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+0
+2
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:387}):\par
+
+找到字符出现的首位和末位进行判断，然后取最早出现的。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 876}}\label{app:problemlist:leetcode:876}
+
+\textbf{Problem Description:}\par
+
+\textbf{链表的中间结点}\par
+
+给定一个带有头结点head的非空单链表，返回链表的中间结点。\par
+
+如果有两个中间结点，则返回第二个中间结点。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+
+输入：[1,2,3,4,5]
+
+输入：[1,2,3,4,5,6]
+
+
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+
+输出：此列表中的结点 3 (序列化形式：[3,4,5])
+返回的结点值为 3 。 (测评系统对该结点序列化表述是 [3,4,5])。
+注意，我们返回了一个 ListNode 类型的对象 ans，这样：
+ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, 以及 ans.next.next.next = NULL.
+
+输出：此列表中的结点 4 (序列化形式：[4,5,6])
+由于该列表有两个中间结点，值分别为 3 和 4，我们返回第二个结点。
+
+
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:876}):\par
+
+快慢指针计数。\par
+
+
+

@@ -1,0 +1,52 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Font Select
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% hopefully embeds all fonts in pdf
+%------------------------------------------------------------------------------
+\ifxetex % xelatex
+	\usepackage{xltxtra,fontspec,xunicode}
+	\ctexset{%
+		punct=quanjiao,
+		space=auto,
+		autoindent=true
+	}
+	\usepackage{xeCJK}
+	\xeCJKsetup{%
+		CJKmath=true,
+		AutoFallBack=true,
+		AutoFakeBold=true,
+		AutoFakeSlant=true
+	}
+\else % pdflatex
+	\usepackage[T1]{fontenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage{pslatex}
+\fi
+
+% Source Serif Pro as the de­fault font family
+% or Source Sans Pro as the de­fault font family
+% Source Code Pro for monospace text
+%
+% 'default' option sets the default
+% font family to Source Sans Pro, not \sfdefault.
+%------------------------------------------------------------------------------
+\ifxetex % xelatex
+	% English Fonts
+	\usepackage[default]{sourceserifpro}
+	\usepackage{sourcesanspro}
+	\usepackage{sourcecodepro}
+	
+	% Chinese Fonts
+	\setCJKmainfont{Source Han Serif CN}
+    % \setCJKmainfont{Source Han Serif SC}
+	\setCJKsansfont{Source Han Sans SC}
+	\setCJKmonofont{Source Han Sans SC}
+	\setCJKfamilyfont{boldsong}{Source Han Serif CN Heavy}
+    % \setCJKfamilyfont{boldsong}{Source Han Serif SC Heavy}
+
+\else % pdflatex
+	\usepackage[default]{sourceserifpro}
+	\usepackage{sourcesanspro}
+	\usepackage{sourcecodepro}
+\fi

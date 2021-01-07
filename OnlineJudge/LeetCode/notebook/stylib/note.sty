@@ -1,0 +1,400 @@
+% frontpage
+%\newcommand{\frontpage}{\include{lib/frontpage}}
+\newcommand{\colorRule}[3][black]{\textcolor[HTML]{#1}{\rule{#2}{#3}}}
+
+% \def \title#1{\gdef\@title{#1}\gdef\theTitle{#1}}
+% \def \subtitle#1{\gdef\@subtitle{#1}\gdef\theSubtitle{#1}}
+% \def \author#1{\gdef\@author{#1}\gdef\theAuthor{#1}}
+% \def \date#1{\gdef\@date{#1}\gdef\theDate{#1}}
+
+\usepackage{lipsum}
+% to be able to draw some self-contained figs
+\usepackage{tikz}
+\usepackage{amsmath}
+% specify position for figs
+\usepackage{float}
+% mix text and figs
+\usepackage{floatflt}
+% inlined bib file
+\usepackage{filecontents}
+\usepackage[title,titletoc]{appendix}
+% tables
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{diagbox}
+
+\usepackage{mathptmx}  % times roman, including math (where possible)
+
+\usepackage{hologo}
+
+\usepackage{ifxetex,ifluatex}
+
+\usepackage{setspace}
+% codes
+\usepackage{listings}
+
+% hopefully embeds all fonts in pdf
+\ifxetex % xelatex
+	\usepackage{xltxtra,fontspec,xunicode}
+	\ctexset{%
+		punct=quanjiao,
+		space=auto,
+		autoindent=true
+	}
+	\usepackage{xeCJK}
+	\xeCJKsetup{%
+		CJKmath=true,
+		AutoFallBack=true,
+		AutoFakeBold=true,
+		AutoFakeSlant=true
+	}
+\else % pdflatex
+	\usepackage[T1]{fontenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage{pslatex}
+\fi
+
+% appearance
+\ifxetex % xelatex
+\else % pdflatex
+	\usepackage[kerning,spacing]{microtype} % more compact and arguably nicer
+\fi
+\usepackage{flushend}           % make cols in last page equal in size
+
+% refs and bib
+\usepackage{cite}               % order multiple entries in \cite{...}
+\usepackage{url}                % allow \url in bibtex for clickable links
+\usepackage{xcolor}             % color definitions, to be use for...
+\usepackage[]{hyperref}         % ...clickable refs within pdf...
+\hypersetup{%
+  colorlinks,
+  linkcolor={green!80!black},
+  citecolor={red!70!black},
+  urlcolor={blue!70!black}
+}
+\ifxetex % xelatex
+\else % pdflatex
+	\usepackage{breakurl}       % break too-long urls in refs
+\fi
+
+\if@titlepage
+\def\maketitle{%
+
+\newgeometry{left=6cm}
+
+\begin{titlepage}
+	\let\footnotesize\small
+	\let\footnoterule\relax
+	\let \footnote \thanks
+
+	\begin{flushleft}
+		\noindent
+		\\[-1em]
+		\color[HTML]{5F5F5F}
+		\makebox[0pt][l]{\colorRule[360049]{1.3\textwidth}{4pt}}
+		\par
+		\noindent{%
+			\setstretch{1.4}
+			\vfill
+			\noindent{%
+				\Huge\bf
+				\textsf{\@title}
+			}
+			\vskip 2em
+			\noindent{%
+				\large\it
+				\textsf{%
+					\lineskip .5em
+                    \begin{tabular}[t]{c}
+						\@author
+					\end{tabular}
+				}
+			}
+			\vfill
+		}
+
+		\textsf{\@date}
+	\end{flushleft}
+\end{titlepage}
+
+\restoregeometry
+
+\begin{titlepage}%
+\let\footnotesize\small
+\let\footnoterule\relax
+\let \footnote \thanks
+
+% 	\null\vfil
+% 	\vskip 60\p@
+% 	\begin{center}%
+% 		{\LARGE \@title \par}%
+% 		\vskip 3em%
+% 		{\large
+% 			\lineskip .75em%
+% 			\begin{tabular}[t]{c}%
+% 				\@author
+% 			\end{tabular}\par}%
+% 			\vskip 1.5em%
+% 		{\large \@date \par}%       % Set date in \large size.
+% 	\end{center}\par
+% 	\@thanks
+% 	\vfil\null
+
+\end{titlepage}%
+
+	\setcounter{footnote}{0}%
+	\global\let\thanks\relax
+	\global\let\maketitle\relax
+	\global\let\@thanks\@empty
+	\global\let\@author\@empty
+	\global\let\@date\@empty
+	\global\let\@title\@empty
+	\global\let\title\relax
+	\global\let\author\relax
+	\global\let\date\relax
+	\global\let\and\relax
+}
+\else
+\def\maketitle{%
+	\par
+
+	\begingroup
+
+	\renewcommand\thefootnote{\fnsymbol{footnote}}%
+	\def\@makefnmark{\hbox to\z@{$\m@th^{\@thefnmark}$\hss}}%
+	\long\def\@makefntext##1{\parindent 1em\noindent
+	\hbox to1.8em{\hss$\m@th^{\@thefnmark}$}##1}%
+
+	\if@twocolumn
+		\twocolumn[\@maketitle]%
+	\else
+		\newpage
+		\global\@topnum\z@
+		\@maketitle
+	\fi
+
+	\@thanks
+
+	\endgroup
+
+	\setcounter{footnote}{0}%
+	\let\maketitle\relax
+	\let\@maketitle\relax
+	\gdef\@thanks{}
+	\gdef\@author{}
+	\gdef\@title{}
+	\let\thanks\relax
+}
+\def\@maketitle{%
+	\newpage
+	\vbox to 2.5in{%
+		\vspace*{\fill}
+		\vskip 2em
+		\begin{center}%
+			{\Large\bf \@title \par}%
+			\vskip 0.375in minus 0.300in
+			{%
+				\large\it%
+				\lineskip .5em
+                \begin{tabular}[t]{c}
+					\@author
+				\end{tabular}
+				\par
+			}%
+		\end{center}%
+		\par
+	\vspace*{\fill}
+	\vskip 1.5em
+	}
+}
+\fi
+
+\ifxetex
+%
+% Main section titles are flushlefted.
+%
+\def\CTEX@section@format{\Large\bfseries}
+
+\else
+%
+% The abstract is preceded by a 12-pt bold centered heading
+\def\abstract{%
+	\begin{center}%
+		{\large\bf \abstractname\vspace{-.5em}\vspace{\z@}}%
+	\end{center}}
+\def\endabstract{}
+
+%
+% Main section titles are 12-pt bold.  Others can be same or smaller.
+%
+\def\section{\@startsection {section}{1}{\z@}{-3.5ex plus-1ex minus
+    -.2ex}{2.3ex plus.2ex}{\reset@font\large\bf}}
+\fi
+
+%
+% Listings
+%
+% general listing colors
+%
+\definecolor{listing-background}{HTML}{F7F7F7}
+\definecolor{listing-rule}{HTML}{B3B2B3}
+\definecolor{listing-numbers}{HTML}{B3B2B3}
+\definecolor{listing-text-color}{HTML}{000000}
+\definecolor{listing-keyword}{HTML}{435489}
+\definecolor{listing-keyword-2}{HTML}{1284CA} % additional keywords
+\definecolor{listing-keyword-3}{HTML}{9137CB} % additional keywords
+\definecolor{listing-identifier}{HTML}{435489}
+\definecolor{listing-string}{HTML}{00999A}
+\definecolor{listing-comment}{HTML}{8E8E8E}
+
+\lstdefinestyle{eisvogel_listing_style}{%
+	language         = java,
+	numbers          = left,
+	xleftmargin      = 2.7em,
+	framexleftmargin = 2.5em,
+	backgroundcolor  = \color{listing-background},
+	basicstyle       = %
+		\color{listing-text-color}\linespread{1.0}\small\ttfamily{},
+	breaklines       = true,
+	frame            = single,
+	framesep         = 0.19em,
+	rulecolor        = \color{listing-rule},
+	frameround       = ffff,
+	tabsize          = 4,
+	numberstyle      = \color{listing-numbers},
+	aboveskip        = 1.0em,
+	belowskip        = 0.1em,
+	abovecaptionskip = 0em,
+	belowcaptionskip = 1.0em,
+	keywordstyle     = {\color{listing-keyword}\bfseries},
+	keywordstyle     = {[2]\color{listing-keyword-2}\bfseries},
+	keywordstyle     = {[3]\color{listing-keyword-3}\bfseries\itshape},
+	sensitive        = true,
+	identifierstyle  = \color{listing-identifier},
+	commentstyle     = \color{listing-comment},
+	stringstyle      = \color{listing-string},
+	showstringspaces = false,
+	escapeinside     = {/*@}{@*/}, % Allow LaTeX inside these special comments
+	literate         =
+	{á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+	{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+	{à}{{\`a}}1 {è}{{\'e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+	{À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+	{ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+	{Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+	{â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+	{Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+	{œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+	{ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+	{€}{{\EUR}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1
+	{»}{{\guillemotright}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1
+	{…}{{\ldots}}1 {≥}{{>=}}1 {≤}{{<=}}1 {„}{{\glqq}}1 {“}{{\grqq}}1
+	{”}{{''}}1
+}
+\lstset{style=eisvogel_listing_style}
+
+%
+% Java (Java SE 12, 2019-06-22)
+%
+\lstdefinelanguage{Java}{%
+	morekeywords={%
+		% normal keywords (without data types)
+		abstract,assert,break,case,catch,class,continue,default,
+    	do,else,enum,exports,extends,final,finally,for,if,implements,
+    	import,instanceof,interface,module,native,new,package,private,
+    	protected,public,requires,return,static,strictfp,super,switch,
+    	synchronized,this,throw,throws,transient,try,volatile,while,
+    	% var is an identifier
+    	var
+  	},
+  	morekeywords={[2] % data types
+		% primitive data types
+		boolean,byte,char,double,float,int,long,short,
+    	% String
+    	String,
+    	% primitive wrapper types
+    	Boolean,Byte,Character,Double,Float,Integer,Long,Short
+    	% number types
+    	Number,AtomicInteger,AtomicLong,BigDecimal,BigInteger,
+		DoubleAccumulator,DoubleAdder,LongAccumulator,LongAdder,Short,
+    	% other
+    	Object,Void,void
+	},
+	morekeywords={[3] % literals
+		% reserved words for literal values
+    	null,true,false,
+	},
+	sensitive,
+	morecomment  = [l]//,
+	morecomment  = [s]{/*}{*/},
+	morecomment  = [s]{/**}{*/},
+	morestring   = [b]",
+	morestring   = [b]',
+}
+
+\lstdefinelanguage{XML}{%
+	morestring      = [b]",
+	moredelim       = [s][\bfseries\color{listing-keyword}]{<}{\ },
+	moredelim       = [s][\bfseries\color{listing-keyword}]{</}{>},
+	moredelim       = [l][\bfseries\color{listing-keyword}]{/>},
+	moredelim       = [l][\bfseries\color{listing-keyword}]{>},
+	morecomment     = [s]{<?}{?>},
+	morecomment     = [s]{<!--}{-->},
+	commentstyle    = \color{listing-comment},
+	stringstyle     = \color{listing-string},
+	identifierstyle = \color{listing-identifier}
+}
+
+%
+% Source Serif Pro as the de­fault font family
+% or Source Sans Pro as the de­fault font family
+% Source Code Pro for monospace text
+%
+% 'default' option sets the default
+% font family to Source Sans Pro, not \sfdefault.
+%
+\ifxetex % xelatex
+	% English Fonts
+	\usepackage[default]{sourceserifpro}
+	\usepackage{sourcesanspro}
+	\usepackage{sourcecodepro}
+	
+	% Chinese Fonts
+	\setCJKmainfont{Source Han Serif CN}
+    % \setCJKmainfont{Source Han Serif SC}
+	\setCJKsansfont{Source Han Sans SC}
+	\setCJKmonofont{Source Han Sans SC}
+	\setCJKfamilyfont{boldsong}{Source Han Serif CN Heavy}
+    % \setCJKfamilyfont{boldsong}{Source Han Serif SC Heavy}
+
+	%
+	% XeLaTeX specific adjustments for straight quotes:
+	% https://tex.stackexchange.com/a/354887
+	%
+	% This issue is already fixed
+	% (see https://github.com/silkeh/latex-sourcecodepro/pull/5)
+	% but the fix is still unreleased.
+	%
+	% TODO: Remove this workaround when the new version of sourcecodepro is 
+	% released on CTAN.
+	%
+	%\makeatletter
+	%\defaultfontfeatures[
+	%	\ttfamily]{
+	%	Numbers   = \sourcecodepro@figurestyle,
+    %    Scale     = \SourceCodePro@scale,
+    %    Extension = .otf }
+    %\setmonofont{SourceCodePro}[
+	%	UprightFont    = *-\sourcecodepro@regstyle,
+    %    ItalicFont     = *-\sourcecodepro@regstyle It,
+    %    BoldFont       = *-\sourcecodepro@boldstyle,
+    %    BoldItalicFont = *-\sourcecodepro@boldstyle It
+	%]
+    %\makeatother
+\else % pdflatex
+	\usepackage[default]{sourceserifpro}
+	\usepackage{sourcesanspro}
+	\usepackage{sourcecodepro}
+\fi
+
