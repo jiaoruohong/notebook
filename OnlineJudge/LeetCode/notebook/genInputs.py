@@ -118,18 +118,18 @@ class NoteGenerator:
             content += "input:"
             content += "\\par" + self.getNewLines(2)
             content += "\\begin{lstlisting}[language=bash]"
-            content += self.getNewLines(2)
+            content += self.getNewLines()
             content += sampleIpt
-            content += self.getNewLines(2)
+            # content += self.getNewLines()
             content += "\\end{lstlisting}"
             content += self.getNewLines(2)
 
             content += "otput:"
             content += "\\par" + self.getNewLines(2)
             content += "\\begin{lstlisting}[language=bash]"
-            content += self.getNewLines(2)
+            content += self.getNewLines()
             content += sampleOpt
-            content += self.getNewLines(2)
+            # content += self.getNewLines()
             content += "\\end{lstlisting}"
             content += self.getNewLines(2)
 
