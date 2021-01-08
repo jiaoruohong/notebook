@@ -190,6 +190,44 @@ otput:\par
 
 
 
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 14}}\label{app:problemlist:leetcode:14}
+
+\textbf{Problem Description:}\par
+
+\textbf{最长公共前缀}\par
+
+编写一个函数来查找字符串数组中的最长公共前缀。\par
+
+如果不存在公共前缀，返回空字符串""。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+输入：strs = ["flower","flow","flight"]
+
+输入：strs = ["dog","racecar","car"]
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+输出："fl"
+
+输出：""
+解释：输入不存在公共前缀。
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:14}):\par
+
+第一种方法是快排之后对比首位字符串得出结果。\par
+
+考虑字符串快排复杂度涉及字符串间的比较，java代码运行速度较慢，因此第二种方法不用排序，直接以第一个字符串为基础，在后续字符串中对比，若不是前缀，则长度减少，直至匹配。\par
+
+
+
 \subsection{\href{https://leetcode-cn.com/}{Leetcode 15}}\label{app:problemlist:leetcode:15}
 
 \textbf{Problem Description:}\par
@@ -786,6 +824,39 @@ otput:\par
 \textbf{Solution }(Codes at~\ref{app:codelist:leetcode:387}):\par
 
 找到字符出现的首位和末位进行判断，然后取最早出现的。\par
+
+
+
+\subsection{\href{https://leetcode-cn.com/}{Leetcode 763}}\label{app:problemlist:leetcode:763}
+
+\textbf{Problem Description:}\par
+
+\textbf{划分字母区间}\par
+
+字符串 S 由小写字母组成。我们要把这个字符串划分为尽可能多的片段，同一字母最多出现在一个片段中。返回一个表示每个字符串片段的长度的列表。\par
+
+
+\textbf{Sample:}\par
+
+input:\par
+
+\begin{lstlisting}[language=bash]
+输入：S = "ababcbacadefegdehijhklij"
+\end{lstlisting}
+
+otput:\par
+
+\begin{lstlisting}[language=bash]
+输出：[9,7,8]
+解释：
+划分结果为 "ababcbaca", "defegde", "hijhklij"。
+每个字母最多出现在一个片段中。
+像 "ababcbacadefegde", "hijhklij" 的划分是错误的，因为划分的片段数较少。
+\end{lstlisting}
+
+\textbf{Solution }(Codes at~\ref{app:codelist:leetcode:763}):\par
+
+相比于合并区间，该题可以只用每个字母的末尾位置即可。\par
 
 
 

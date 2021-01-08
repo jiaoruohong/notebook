@@ -13,7 +13,7 @@ class NoteGenerator:
     id = ""
     weblink = "https://leetcode-cn.com/"
 
-    problemDir = "../promble/"
+    problemDir = "../problem/"
     sampleIptDir = "../sampleIpt/"
     sampleOptDir = "../sampleOpt/"
     solutionDir = "../solution/"
