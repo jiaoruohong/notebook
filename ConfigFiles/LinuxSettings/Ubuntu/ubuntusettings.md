@@ -321,7 +321,21 @@ sudo apt-get install git tmux openssh-server mosh python-dev python3-dev libncur
     ``` cpp
     make distclean
 
-    ./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-python3interp --enable-luainterp --enable-perlinterp --enable-multibyte --enable-cscope --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ --with-python-config-dir=/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/
+    ./configure \
+    --with-features=huge \
+    --enable-largefile \
+    --enable-rubyinterp \
+    --enable-pythoninterp \
+    --enable-python3interp \
+    --enable-luainterp \
+    --enable-perlinterp \
+    --enable-multibyte \
+    --enable-cscope \
+    --enable-terminal \
+    --enable-fail-if-missing \
+    --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ \
+    --with-python-config-dir=/usr/lib/python3.8/config-3.8-x86_64-linux-gnu/ \
+    --with-python3-command=python3
 
     sudo make
 
